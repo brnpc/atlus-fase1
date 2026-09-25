@@ -1,0 +1,19 @@
+/* Reset básico + variáveis CSS (custom properties) */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cor-primaria: #14284f;
+  --cor-acento: #1d4ed8;
+  --cor-fundo: #f5f6f8;
+  --cor-branco: #ffffff;
+  --cor-texto: #111827;
+  --cor-texto-suave: #6b7280;
+  --cor-borda: #e5e7eb;
+  --cor-sucesso: #16a34a;
+  --cor-erro: #dc2626;
+  --raio: 8px;
+  --sombra: 0 2px 8px rgba(0,0,0,0.08);
+  --fonte-sistema: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+html { font-size: 16px; }
+body { font-family: var(--fonte-sistema); background: var(--cor-fundo); color: var(--cor-texto); line-height: 1.5; min-height: 100vh; }
+#app { width: 100%; max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
