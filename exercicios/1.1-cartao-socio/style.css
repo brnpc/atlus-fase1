@@ -1,37 +1,69 @@
-.cartao-socio{
-    background-color: var(--cor-branco);
-    border-radius: var(--raio);
-    padding: 1.5rem;
-    max-width: 450px;
-    margin: 2rem auto;
-}
-.cabeçalho-socio{
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-
-    border-buttom: 1px solid var(--cor-borda);
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
+/* CONCEITO: CSS Box Model (Margens, Espaçamentos, Bordas e Sombras) */
+.cartao-socio {
+  background-color: var(--cor-branco);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 1.5rem; /* Espaço interno */
+  max-width: 450px; /* Limita a largura do cartão */
+  margin: 2rem auto; /* Centraliza o cartão na tela */
 }
 
-.avatar{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+/* CONCEITO: Flexbox (Colocar elementos lado a lado) */
+.cabecalho-socio {
+  display: flex; /* Coloca a imagem e o texto lado a lado */
+  gap: 1.5rem; /* Cria espaço entre a imagem e o texto */
+  align-items: center; /* Alinha tudo verticalmente ao centro */
+
+  border-bottom: 1px solid var(--cor-borda); /* Linha divisória */
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.badges{
-    display: flex;
-    gap: 0.5rem;
-    margin-top : 0.75rem;
+/* Controlar a imagem (para não ficar gigante) */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover;
 }
 
-.badge--plano{
-    background-color: var(--cor-acento);
+/* CONCEITO: Uso de Custom Properties (Variáveis CSS) para as Badges */
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.badge--adimplente{
-    background-color: var(--cor-sucesso);
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--cor-branco);
+}
+
+.badge--plano {
+  background-color: var(--cor-acento); /* Azul definido no main.css */
+}
+
+.badge--adimplente {
+  background-color: var(--cor-sucesso); /* Verde definido no main.css */
+}
+
+/* Estilizar a Description List (Semântica) */
+.detalhes-socio dt {
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+.detalhes-socio dd {
+  margin-bottom: 0.5rem;
+}
+
+/* CONCEITO: Responsividade (Media Queries) - Checkpoint 1.1 */
+/* O roadmap exige que em telas menores que 480px, o avatar empilhe acima do nome */
+@media (max-width: 480px) {
+  .cabecalho-socio {
+    flex-direction: column; /* Muda o flexbox de horizontal para vertical */
+    text-align: center;
+  }
 }

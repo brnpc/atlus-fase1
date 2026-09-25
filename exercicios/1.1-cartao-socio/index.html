@@ -1,34 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cartão Sócio</title>
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <article>: O cartão inteiro é um bloco autónomo e completo -->
     <article class="cartao-socio">
-        <header class="cabeçalho-socio">
-            <img class="avatar" src="imagens/usuario1.jpg" alt="Imagem do usuario">
+      <!-- <header>: O topo introdutório do cartão (Foto + Nome + Email) -->
+      <header class="cabeçalho-socio">
+        <img
+          class="avatar"
+          src="imagens/usuario1.jpg"
+          alt="Imagem do usuario"
+        />
+        <!-- <div>: Apenas uma caixa genérica para organizar o texto -->
+        <div class="info-principal">
+          <h2>Saitama</h2>
+          <p>Email: saitamadasilva@gmail.com</p>
+          <!-- <div>: Apenas uma caixa para alinhar os selos lado a lado -->
+          <div class="badges">
+            <span class="badge badge--plano">ANUAL</span>
+            <span class="badge badge--status badge--adimplente"
+              >ADIMPLENTE</span
+            >
+          </div>
+        </div>
+      </header>
+      <!-- <dl>: A lista semântica de dados secundários -->
+      <dl>
+        <dt>Inscricão socio:</dt>
+        <dd>25 de junho de 2023</dd>
 
-            <div class="info-principal">
-                <h2>Saitama</h2>
-                <p>Email: saitamadasilva@gmail.com</p>
-                <div class="badges">
-                    <span class="badge badge--plano">ANUAL</span>
-                    <span class="badge badge--status badge--adimplente">ADIMPLENTE</span>
-                </div>
-            </div>
-        </header>
-
-        <dl>
-            <dt>Inscricão socio:</dt>
-            <dd>25 de junho de 2023</dd>
-            
-            <dt>Telefone:</dt>
-            <dd>65 996267748</dd>
-        </dl>
+        <dt>Telefone:</dt>
+        <dd>65 996267748</dd>
+      </dl>
     </article>
-</body>
+  </body>
 </html>
